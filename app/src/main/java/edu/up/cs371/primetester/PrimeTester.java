@@ -14,7 +14,16 @@ public class PrimeTester {
      * @return true iff n is prime
      */
     public static boolean isPrime(long n) {
-        // for now, return a random result
-        return Math.random() > 0.5;
+        //loop to see if the number is divisible by
+        //2 or itself
+        int i;
+        for(i=2; i < n; i++) {
+            //in this case not prime
+            if(n % i == 0 && i != n) {
+            return false;
+            }
+        }
+        //in all other cases, prime
+        return true;
     }
 }
