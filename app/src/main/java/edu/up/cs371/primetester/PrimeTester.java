@@ -1,5 +1,7 @@
 package edu.up.cs371.primetester;
 
+import android.util.Log;
+
 /**
  * Created by vegdahl on 7/17/2015.
  *
@@ -18,10 +20,13 @@ public class PrimeTester {
         //2 or itself
         int i;
         for(i=2; i < n; i++) {
+            Log.i("isPrime", "" + i);
             //in this case not prime
             if(n % i == 0 && i != n) {
-            return false;
+
+                return false;
             }
+
         }
         //in all other cases, prime
         return true;
